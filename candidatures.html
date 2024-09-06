@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Candidature pour le bureau du tutorat de médecine USTA 2024-2025</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f7f7f7;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        .container {
+            width: 50%;
+            margin: 50px auto;
+            background-color: white;
+            padding: 30px;
+            box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+        h2 {
+            text-align: center;
+            color: #5a2d82;  /* Purple color for the title */
+            margin-bottom: 20px;
+        }
+        form {
+            display: flex;
+            flex-direction: column;
+        }
+        input, select, textarea {
+            margin-bottom: 20px;
+            padding: 12px;
+            font-size: 16px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+        input:focus, select:focus, textarea:focus {
+            outline: none;
+            border-color: #5a2d82;  /* Purple color for focused inputs */
+            box-shadow: 0 0 5px rgba(90, 45, 130, 0.5);
+        }
+        button {
+            padding: 15px;
+            font-size: 16px;
+            background-color: #5a2d82;  /* Purple color for the button */
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #4e2670;  /* Darker purple on hover */
+        }
+        label {
+            font-weight: bold;
+            margin-bottom: 5px;
+            color: #5a2d82;  /* Purple color for labels */
+        }
+        .thank-you-message {
+            display: none;
+            text-align: center;
+            font-size: 18px;
+            color: #5a2d82;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2>Candidature pour le bureau du tutorat de médecine USTA 2024-2025</h2>
+        <form id="candidatureForm">
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" required>
+
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" required>
+
+            <label for="niveau">Niveau :</label>
+            <select id="niveau" name="niveau" required>
+                <option value="Licence 1">Licence 1</option>
+                <option value="Licence 2">Licence 2</option>
+                <option value="Licence 3">Licence 3</option>
+                <option value="Master 1">Master 1</option>
+                <option value="Master 2">Master 2</option>
+                <option value="Doctorat 1">Doctorat 1</option>
+            </select>
+
+            <label for="poste">Poste Souhaité :</label>
+            <select id="poste" name="poste" required>
+                <option value="President">Président</option>
+                <option value="Vice-president">Vice-président</option>
+                <option value="Secretaire general">Secrétaire général</option>
+                <option value="Vice-secretaire general">Vice-secrétaire général</option>
+                <option value="Directeur">Directeur</option>
+                <option value="Vice-directeur">Vice-directeur</option>
+                <option value="Tresorier">Trésorier</option>
+                <option value="Vice-tresorier">Vice-trésorier</option>
+            </select>
+
+            <label for="motivation">Motivation (30 mots maximum) :</label>
+            <textarea id="motivation" name="motivation" rows="4" maxlength="300" placeholder="Votre motivation en 30 mots maximum" required></textarea>
+
+            <button type="submit">Envoyer la Candidature</button>
+        </form>
+        <div class="thank-you-message" id="thankYouMessage">
+            Merci pour votre participation ! 😎
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to show thank you message on form submission
+        document.getElementById("candidatureForm").addEventListener("submit", function(event) {
+            event.preventDefault(); // Prevent form from submitting normally
+            document.getElementById("thankYouMessage").style.display = "block"; // Show thank you message
+        });
+    </script>
+</body>
+</html>
